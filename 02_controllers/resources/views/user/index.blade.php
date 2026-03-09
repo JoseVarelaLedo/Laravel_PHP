@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>User list:</h1>   
+    <ul>
+        @forelse ($users as $user)
+            <li> {{ $user -> name }}, edad: {{ $user -> age }}</li>
+            @empty
+            <p><em>The list is empty</em></p>
+        @endforelse
+    </ul>  
 </body>
 </html>
