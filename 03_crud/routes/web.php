@@ -1,0 +1,13 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NoteController;
+
+//ruta general, controlada desde la clase NoteController, mediante la función index()
+Route::get('note', [NoteController::class, 'index'])->name('note.index');
+//ruta para creación de notas mediante formulario
+Route::get('note/create', [NoteController::class, 'create'])->name('note.create');
+//ruta post para el guardado de datos
+Route::post('note/store', [NoteController::class, 'store'])->name('note.store');
+//ruta para actualización de notas mediante formulario; el parámetro es la propia nota
+Route::get('note/edit/{note}', [NoteController::class, 'edit'])->name('note.edit');
