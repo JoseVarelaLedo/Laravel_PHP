@@ -2,7 +2,8 @@
 
 @section('content')
     <a href="{{ route('note.index') }}">Home</a>
-    <form method="POST" action="#">
+    <form method="POST" action="{{ route('note.update', $note->id) }}">
+        @method ('PUT')
         @csrf
         <label>Title:</label>
         <!-- Recuperamos el valor título de la nota  -->

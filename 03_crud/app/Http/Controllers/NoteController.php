@@ -29,4 +29,21 @@ class NoteController extends Controller
     {        
         return view('note.edit', compact('note')); //haríamos un return de la nota a editar en una vista de formulario
     }
+
+    public function update (Request $request, Note $note)
+    {
+        $note-> update($request->all());
+        return redirect()->route('note.index');
+    }
+
+    public function show (Note $note)
+    {
+        return view('note.show', compact('note'));
+    }
+
+    public function destroy (Note $note)
+    {
+        $note->delete();
+        return redirect()->route('note.index');
+    }
 }

@@ -11,3 +11,9 @@ Route::get('note/create', [NoteController::class, 'create'])->name('note.create'
 Route::post('note/store', [NoteController::class, 'store'])->name('note.store');
 //ruta para actualización de notas mediante formulario; el parámetro es la propia nota
 Route::get('note/edit/{note}', [NoteController::class, 'edit'])->name('note.edit');
+//ruta para guardar las actualizaciones
+Route::put('note/update/{note}', [NoteController::class, 'update'])->name('note.update');
+//ruta para mostrar la nota al completo
+Route::get('note/show/{note}', [NoteController::class, 'show'])->name('note.show');
+//ruta para el borrado de notas
+Route::delete('note/destroy/{note}', [NoteController::class, 'destroy'])->name('note.destroy');
