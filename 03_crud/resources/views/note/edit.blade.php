@@ -7,12 +7,19 @@
         @csrf
         <label>Title:</label>
         <!-- Recuperamos el valor título de la nota  -->
-        <input type="text" name="title" value="{{ $note -> title }}"/>
+        <input type="text" name="title" value="{{ $note->title }}" />
+        @error('title')
+            <br>
+            <p style="color:red">{{ $message }}</p>
+        @enderror
 
         <label>Description:</label>
         <!-- Recuperamos el valor descripción de la nota  -->
-        <input type="text" name="description" value="{{ $note -> description }}"/>
-
-        <input type="submit" value="Update"/>
-    </form>    
-@endsection 
+        <input type="text" name="description" value="{{ $note->description }}" />
+        @error('description')
+            <br>
+            <p style="color:red">{{ $message }}</p>
+        @enderror
+        <input type="submit" value="Update" />
+    </form>
+@endsection
