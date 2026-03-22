@@ -1,0 +1,5 @@
+2026
+03
+22
+18:59:12
+La clase Chart a través de la siguiente función -> calculateTotal ha reportado el siguiente mensaje: Se ha calculado el total del carrito: 101.3.
