@@ -10,7 +10,7 @@ class Main
         // $ejTres->create();
         $ejCinco = new EjercicioCinco();
         $day = readline('Introduce el día:');
-        echo $ejCinco->getDay($day);
+        echo $ejCinco->getDay(4);
     }
 }
 
