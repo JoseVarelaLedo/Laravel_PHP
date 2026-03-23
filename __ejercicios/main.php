@@ -9,7 +9,8 @@ class Main
         // $ejTres = new EjercicioTres();
         // $ejTres->create();
         $ejCinco = new EjercicioCinco();
-        echo $ejCinco->getDay(5);
+        $day = readline('Introduce el día:');
+        echo $ejCinco->getDay($day);
     }
 }
 
