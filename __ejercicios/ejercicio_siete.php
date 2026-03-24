@@ -71,6 +71,6 @@ $ej->main();
 /*
 Cómo probar:
 Sin parámetros: Devuelve todos los productos.
-Con ?min_price=1.5: Filtra productos con precio >= 1.5.
+Añadiendo al endpoint lo siguiente ?min_price=1.5: Filtra productos con precio >= 1.5.
 Con ?min_price=abc: Devuelve error JSON.
 */
