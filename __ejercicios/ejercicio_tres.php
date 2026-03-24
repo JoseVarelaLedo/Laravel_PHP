@@ -1,13 +1,15 @@
-<!-- Crear un carrito de la compra con:
+<?php
+/*
+Crear un carrito de la compra con:
 
-Propiedades: 
+Propiedades:
     productos (array)
 Métodos:
     Añadir producto (nombre, precio, cantidad)
     Eliminar producto
     Calcular total
-    Listar productos -->
-<?php
+    Listar productos 
+*/
 
 require 'ejercicio_cuatro.php';
 

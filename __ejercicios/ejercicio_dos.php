@@ -1,4 +1,6 @@
-<!-- Escribir una función que valide una contraseña según:
+<?php
+/*
+Escribir una función que valide una contraseña según:
 
 Mínimo 8 caracteres
 
@@ -8,10 +10,8 @@ Al menos un número
 
 Al menos un símbolo
 
-Devolver mensajes claros indicando qué falla. -->
-
-
-<?php
+Devolver mensajes claros indicando qué falla.
+*/
 class EjercicioDos{
     //ojo a cómo se declara la constante, con const, el tipo de dato y sin el signo de dólar
     private const REGEX = '/^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};\':"\\|,.<>\/?]).{8,}$/';

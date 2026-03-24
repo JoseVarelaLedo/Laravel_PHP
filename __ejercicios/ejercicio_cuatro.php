@@ -1,11 +1,11 @@
-<!--
+<?php
+/* 
 Crear un sistema simple de logs que:
 
     Escriba mensajes en un archivo log.txt
     Cada línea debe incluir fecha, hora y mensaje
     Añade una función para leer y mostrar el log
--->
-<?php
+ */
 class Log
 {
     private string $year;

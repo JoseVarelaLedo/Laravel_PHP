@@ -1,4 +1,5 @@
-<!-- Gestión de usuarios con arrays
+<?php
+/* Gestión de usuarios con arrays
 
 Crear un script que:
 
@@ -10,9 +11,8 @@ Y que permita:
 
     Ordenarlos por edad.
 
-    Buscar un usuario por email. -->
-
-<?php
+    Buscar un usuario por email.
+*/
 class EjercicioUno{
     public function mapArray(array $users): array{
         $users = array_filter($users, function($user){

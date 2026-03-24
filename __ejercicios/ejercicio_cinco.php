@@ -1,11 +1,11 @@
-<!--
+<?php
+/*
 Crear un script que:
 
     Reciba un número del 1 al 7
     Devuelva el día de la semana usando match
     Maneje valores inválidos
--->
-<?php
+*/
 
 class EjercicioCinco
 {
