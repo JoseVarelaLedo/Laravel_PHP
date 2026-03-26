@@ -83,7 +83,7 @@ class EjercicioSeis
         if ($this->validarCredenciales($nickname, $password)) {
             $_SESSION['loggedIn'] = true;
             $_SESSION['user'] = $nickname;
-            header('Location: views/index.php');
+            header('Location: views/index_ej_seis.php');
             exit;
         } else {
             echo 'Credenciales incorrectas';
@@ -96,7 +96,7 @@ class EjercicioSeis
     private function mostrarFormulario(): void
     {
         $token = $this->generarTokenCSRF();
-        include 'views/formulario.php';
+        include 'views/formulario_ej_seis.php';
     }
 
     /**
