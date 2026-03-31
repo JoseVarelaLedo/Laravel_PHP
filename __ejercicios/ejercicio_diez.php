@@ -47,21 +47,33 @@ class Chart
 
 class Menu
 {
-    public function selectProduct(array $products):array
+
+    public function selectProduct(array $products): array
     {
         $productsAcquired = [];
-        for ($i = 0; $i<count($products); $i++)
-            {
-                print_r( $i+1,".- ".$products[$i]->name,".");
-                $index = (int)readline("...Selecciona producto de la lista, 0 para terminar...");
-                while ($index != 0){
-                    (int)readline("...Selecciona producto de la lista, 0 para terminar...");
-                    array_push($productsAcquired, $products[$index-1]);
-                }
+
+        // 1. Mostrar productos FUERA del bucle de selección
+        for ($i = 0; $i < count($products); $i++) {
+            echo ($i + 1) . ".- " . $products[$i]->name . " (" . $products[$i]->price . "€)\n";
+        }
+
+        // 2. Pedir selección en su propio bucle
+        $index = (int)readline("...Selecciona producto de la lista, 0 para terminar: ");
+        while ($index != 0) {
+            if ($index >= 1 && $index <= count($products)) {
+                array_push($productsAcquired, $products[$index - 1]);
+                echo "Añadido: " . $products[$index - 1]->name . "\n";
+            } else {
+                echo "Índice fuera de rango.\n";
             }
+            // 3. Actualizar $index dentro del while
+            $index = (int)readline("...Selecciona producto de la lista, 0 para terminar: ");
+        }
+
         return $productsAcquired;
     }
 }
+
 
 class EjercicioDiez
 {
